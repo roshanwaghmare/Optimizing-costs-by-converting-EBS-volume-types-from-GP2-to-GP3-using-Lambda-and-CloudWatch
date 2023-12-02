@@ -46,3 +46,32 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
     }
+
+
+
+
+# NEW CODE
+
+import boto3
+
+def get_volume_id_from_arn(volume_arn):
+    # Split the ARN using colon (':') separator
+    arn_parts = volume_arn.split(':')
+    # The volume id is the last part of the ARN after the 'volume/' prefix
+    volume_id = arn_parts[-1].split('/')[-1]
+    return volume_id
+
+def lambda_handler(event, context):
+    # Use correct syntax for accessing 'resources' in the event dictionary
+    volume_arn = event[resources][0]
+    volume_id = get_volume_id_from_arn(volume_arn)
+    
+    # Use correct variable name 'ec2_client'
+    ec2_client = boto3.client('ec2')
+    
+    # Use the correct variable name 'ec2_client' in the following line
+    response = client.modify_volume(
+        VolumeId=volume_id,
+        VolumeType='gp3',
+    )
+   
