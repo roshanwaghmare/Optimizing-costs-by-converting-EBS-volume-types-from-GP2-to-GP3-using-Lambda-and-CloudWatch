@@ -63,15 +63,16 @@ def get_volume_id_from_arn(volume_arn):
 
 def lambda_handler(event, context):
     # Use correct syntax for accessing 'resources' in the event dictionary
-    volume_arn = event[resources][0]
+    volume_arn = event['resources'][0]
     volume_id = get_volume_id_from_arn(volume_arn)
     
     # Use correct variable name 'ec2_client'
     ec2_client = boto3.client('ec2')
     
     # Use the correct variable name 'ec2_client' in the following line
-    response = client.modify_volume(
+    response = ec2_client.modify_volume(
         VolumeId=volume_id,
         VolumeType='gp3',
     )
    
+
