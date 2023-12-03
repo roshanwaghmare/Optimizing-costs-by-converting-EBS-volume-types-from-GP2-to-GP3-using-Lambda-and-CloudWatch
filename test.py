@@ -50,7 +50,7 @@ def lambda_handler(event, context):
 
 
 
-# NEW CODE
+# USE BELOW CODE FOR EXECUTION 
 
 import boto3
 
