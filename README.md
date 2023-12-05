@@ -52,4 +52,24 @@ ModifyVolume
 
 now craete EBS volume GP2 and refresh the page if volume automatically chnaged to GP3 that means you have successfully completed this project.
 
+
+Project: Optimizing Costs through EBS Volume Type Conversion
+
+Description:
+
+Implemented a cost optimization initiative by converting Amazon Elastic Block Store (EBS) volume types from GP2 to GP3 using serverless architecture.
+
+Key Achievements:
+
+Utilized AWS Lambda functions to automate the conversion process, enhancing operational efficiency.
+Implemented event-driven triggers using AWS CloudWatch to initiate volume type conversions based on predefined criteria.
+Achieved a [insert percentage]% reduction in storage costs by migrating to the more cost-effective GP3 volume type.
+Ensured minimal impact on system performance and availability during the transition.
+Technologies Used:
+
+AWS Lambda
+Amazon EBS (GP2 and GP3)
+AWS CloudWatch
+Serverless architecture
+
 THANK YOU 
